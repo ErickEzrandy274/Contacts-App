@@ -6,8 +6,8 @@ const App = () => {
     const contacts = getData();
 
     return (
-        <div className="max-w-[800px] my-auto p-4">
-            <h1 className="text-5xl mb-8">Daftar Kontak</h1>
+        <div className="max-w-[800px] p-4 mx-auto">
+            <h1 className="text-5xl mb-8 p-4 px-5">Daftar Kontak</h1>
             <ContactList contacts={contacts} />
         </div>
     );

@@ -5,7 +5,7 @@ import ContactItemImage from "./ContactItemImage";
 
 const ContactItem: React.FC<ContactItemProps> = ({ imageUrl, name, tag }) => {
 	return (
-		<div className="flex items-center mx-6 border-2 border-black p-4 rounded-lg">
+		<div className="flex items-center mx-6 border-2 border-black p-4 rounded-lg border-dashed">
 			<ContactItemImage imageUrl={imageUrl} />
             <ContactItemBody name={name} tag={tag} />
 		</div>
