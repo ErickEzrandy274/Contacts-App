@@ -1,26 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ContactList from "./components/ContactList";
+import { getData } from "./utils/data";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const contacts = getData();
+
+    return (
+        <div className="max-w-[800px] my-auto p-4">
+            <h1 className="text-5xl mb-8">Daftar Kontak</h1>
+            <ContactList contacts={contacts} />
+        </div>
+    );
+};
 
 export default App;

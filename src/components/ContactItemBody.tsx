@@ -10,4 +10,4 @@ const ContactItemBody: React.FC<ContactItemBodyProps> = ({ name, tag }) => {
 	);
 };
 
-export default ContactItemBody;
+export default ContactItemBody
