@@ -3,8 +3,8 @@ import { ContactItemImageProps } from "../utils/interface";
 
 const ContactItemImage: React.FC<ContactItemImageProps> = ({ imageUrl }) => {
 	return (
-		<div className="contact-item__image">
-			<img className="w-full" src={imageUrl} alt="contact avatar" />
+		<div className="w-16">
+			<img className="w-full rounded-full" src={imageUrl} alt="contact avatar" />
 		</div>
 	);
 };
