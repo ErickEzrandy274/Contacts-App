@@ -11,6 +11,7 @@ const Input: React.FC<InputProps> = ({ name, placeholder, handleChange, value })
             value={value}
             placeholder={placeholder}
             onChange={e => handleChange(e)}
+            required
 		/>
 	);
 };
