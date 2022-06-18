@@ -15,14 +15,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-/* DELETE THIS AFTER USING TAILWIND */
-.contact-item__delete {
-  padding: 8px;
-  font-size: 18px;
-  background-color: orangered;
-  color: white;
-  border: 0;
-  border-radius: 4px;
-  cursor: pointer;
-}

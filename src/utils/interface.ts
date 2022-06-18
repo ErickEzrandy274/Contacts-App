@@ -32,4 +32,14 @@ export interface DeleteButtonProps extends DeleteFunctionProps {
 export interface InputProps {
     name: string
     placeholder: string
+    value: string
+    handleChange: (e:any) => void
+}
+
+export interface ContactInputProps {
+    addContact: (name: string, tag: string) => void
+}
+
+export interface SubmitProps extends ContactInputProps, ContactItemBodyProps { 
+    setField: React.Dispatch<SetStateAction<{ name: string; tag: string; }>>
 }
