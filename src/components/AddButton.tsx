@@ -13,6 +13,7 @@ const AddButton: React.FC<SubmitProps> = ({ addContact, name, tag, phone, setFie
                 tag: "",
                 phone: ""
             })
+            alert(`${name} has been added!`)
         }
     }
 
