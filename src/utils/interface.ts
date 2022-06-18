@@ -1,3 +1,5 @@
+import React, { SetStateAction } from "react"
+
 export interface ContactItemBodyProps {
     name: string
     tag: string
@@ -11,4 +13,5 @@ export interface ContactItemProps extends ContactItemBodyProps, ContactItemImage
 
 export interface ContactListProps {
     contacts: any[]
+    setContacts: React.Dispatch<SetStateAction<any[]>>
 }

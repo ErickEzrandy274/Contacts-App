@@ -6,8 +6,8 @@ const ContactList: React.FC<ContactListProps> = ({ contacts }) => {
 
 	return (
 		<div className="flex flex-col gap-6">
-			{contacts.map((contact) => (
-				<ContactItem key={contact.id} {...contact} />
+			{contacts.map((contact: any, index: number) => (
+				<ContactItem key={index} {...contact} />
 			))}
 		</div>
 	);
