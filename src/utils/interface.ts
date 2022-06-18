@@ -28,3 +28,8 @@ export interface ContactListProps extends DeleteFunctionProps {
 export interface DeleteButtonProps extends DeleteFunctionProps {
     index: string
 }
+
+export interface InputProps {
+    name: string
+    placeholder: string
+}
