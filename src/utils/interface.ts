@@ -9,9 +9,22 @@ export interface ContactItemImageProps {
     imageUrl: string
 }
 
-export interface ContactItemProps extends ContactItemBodyProps, ContactItemImageProps { } 
-
-export interface ContactListProps {
-    contacts: any[]
+interface SetContactsAction {
     setContacts: React.Dispatch<SetStateAction<any[]>>
+}
+
+interface DeleteFunctionProps {
+    deleteContact: (index: string) => void
+}
+
+export interface ContactItemProps extends ContactItemBodyProps, ContactItemImageProps, SetContactsAction, DeleteFunctionProps { 
+    id: string
+} 
+
+export interface ContactListProps extends DeleteFunctionProps {
+    contacts: any[]
+}
+
+export interface DeleteButtonProps extends DeleteFunctionProps {
+    index: string
 }
