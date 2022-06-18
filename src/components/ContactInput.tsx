@@ -4,9 +4,10 @@ import AddButton from "./AddButton";
 import Input from "./Input";
 
 const ContactInput: React.FC<ContactInputProps> = ({ addContact }) => {
-    const [field, setField] = React.useState<{ name: string, tag: string }>({
+    const [field, setField] = React.useState<{ name: string, tag: string, phone: string }>({
         name: "",
-        tag: ""
+        tag: "",
+        phone: ""
     })
 
     const handleChange = (e:any) => {
@@ -16,7 +17,7 @@ const ContactInput: React.FC<ContactInputProps> = ({ addContact }) => {
 
         setField({
             ...field,
-            [name] : value
+            [name]: value
         })
     }
     
@@ -33,6 +34,12 @@ const ContactInput: React.FC<ContactInputProps> = ({ addContact }) => {
                 placeholder="Masukkan tag kontak baru"
                 handleChange={handleChange}
                 value={field.tag}
+            />
+            <Input
+                name="phone"
+                placeholder="Masukkan nomor handphone kontak baru"
+                handleChange={handleChange}
+                value={field.phone}
             />
 			<AddButton addContact={addContact} {...field} setField={setField} />
 		</form>

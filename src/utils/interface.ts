@@ -3,6 +3,7 @@ import React, { SetStateAction } from "react"
 export interface ContactItemBodyProps {
     name: string
     tag: string
+    phone: string
 }
 
 export interface ContactItemImageProps {
@@ -41,7 +42,7 @@ export interface ContactInputProps {
 }
 
 export interface SubmitProps extends ContactInputProps, ContactItemBodyProps { 
-    setField: React.Dispatch<SetStateAction<{ name: string; tag: string; }>>
+    setField: React.Dispatch<SetStateAction<{ name: string; tag: string; phone: string; }>>
 }
 
 export interface FailedAlertProps {

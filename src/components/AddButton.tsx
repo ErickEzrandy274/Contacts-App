@@ -3,13 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro"
 import { SubmitProps } from "../utils/interface";
 
-const AddButton: React.FC<SubmitProps> = ({ addContact, name, tag, setField }) => {
+const AddButton: React.FC<SubmitProps> = ({ addContact, name, tag, phone, setField }) => {
     const handleSubmit = (e: any) => {
         e.preventDefault()
         addContact(name, tag)
         setField({
             name: "",
-            tag: ""
+            tag: "",
+            phone: "",
         })
     }
 
