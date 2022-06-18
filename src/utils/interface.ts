@@ -34,11 +34,12 @@ export interface InputProps {
     name: string
     placeholder: string
     value: string
+    type: string
     handleChange: (e:any) => void
 }
 
 export interface ContactInputProps {
-    addContact: (name: string, tag: string) => void
+    addContact: (name: string, tag: string, phone: string) => void
 }
 
 export interface SubmitProps extends ContactInputProps, ContactItemBodyProps { 

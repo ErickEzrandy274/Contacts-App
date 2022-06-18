@@ -13,13 +13,14 @@ const App = () => {
 		setContacts(newContacts);
     };
     
-    const addContact = (name: string, tag: string) => {
+    const addContact = (name: string, tag: string, phone: string) => {
         const allNameValues = contacts.map(({ name }) => name)
         if (allNameValues.findIndex((item) => item === name) === -1){
             const newObjContact = {
                 id: uuidv4(),
                 name,
                 tag,
+                phone,
                 imageUrl: '/images/default.jpg',
             }
 
