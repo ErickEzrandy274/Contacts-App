@@ -43,3 +43,7 @@ export interface ContactInputProps {
 export interface SubmitProps extends ContactInputProps, ContactItemBodyProps { 
     setField: React.Dispatch<SetStateAction<{ name: string; tag: string; }>>
 }
+
+export interface FailedAlertProps {
+    message: string
+}
